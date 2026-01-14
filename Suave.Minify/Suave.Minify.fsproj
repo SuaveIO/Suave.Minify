@@ -1,64 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4338106C-9C1C-47F9-B470-DD9DDE830B66}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>Suave.Minify</RootNamespace>
     <AssemblyName>Suave.Minify</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>Ademar Gonzalez</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Suave.Minify</PackageId>
+    <Version>2.1.0</Version>
+    <Description>A minify and bundling WebPart for Suave</Description>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <PlatformTarget>
-    </PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <DefineConstants>
-    </DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <GenerateTailCalls>true</GenerateTailCalls>
-    <PlatformTarget>
-    </PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup>
-    <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(VisualStudioVersion)' == '10.0' OR '$(VisualStudioVersion)' == '11.0'">
-    <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Suave">
-      <HintPath>..\packages\Suave.2.0.0-rc2\lib\net40\Suave.dll</HintPath>
-    </Reference>
-    <Reference Include="EcmaScript.NET">
-      <HintPath>..\packages\EcmaScript.Net.1.0.1.0\lib\net20\EcmaScript.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="Yahoo.Yui.Compressor">
-      <HintPath>..\packages\YUICompressor.NET.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+
   <ItemGroup>
     <Compile Include="Library.fs" />
   </ItemGroup>
+
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="FSharp.Core" Version="10.0.101" />
+    <PackageReference Include="Suave" Version="3.2.2" />
+    <PackageReference Include="YUICompressor.NET" Version="3.1.0" />
+    <PackageReference Include="EcmaScript.Net" Version="2.0.0" />
   </ItemGroup>
-  <Import Project="$(FSharpTargetsPath)" />
+
 </Project>
