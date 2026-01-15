@@ -8,6 +8,7 @@ before_build:
   - ps: '& "$env:appveyor_build_folder\dotnet-install.ps1" -Channel "10.0" -InstallDir "C:\Program Files\dotnet"'
 
   - ps: nuget restore
+  - ps: nuget spec Suave.Minify/Suave.Minify.csproj -Force -Out Suave.Minify/Suave.Minify.nuspec
 build:
   publish_nuget: true
   verbosity: minimal
