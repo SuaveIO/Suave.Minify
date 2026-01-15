@@ -3,7 +3,7 @@
 A minify and bundling WebPart for [Suave](https://suave.io/) using [YUI Compressor](https://github.com/YUICompressor-NET/YUICompressor.NET).
 
 [![NuGet](https://img.shields.io/nuget/v/Suave.Minify.svg)](https://www.nuget.org/packages/Suave.Minify/)
-[![Build status](https://ci.appveyor.com/api/projects/status/ny7hk6bo7gv9s97m?svg=true)](https://ci.appveyor.com/project/AdemarGonzalez/suave-minify)
+[![Build status](https://ci.appveyor.com/api/projects/status/ny7hk6bo7gv9s97m?svg=true&x)](https://ci.appveyor.com/project/AdemarGonzalez/suave-minify)
 
 ## Features
 
