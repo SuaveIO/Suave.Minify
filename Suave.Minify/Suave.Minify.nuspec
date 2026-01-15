@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Suave.Minify</id>
-    <version>1.0.0-alpha1</version>
+    <version>2.1.0</version>
     <title>Suave.Minify</title>
     <authors>Ademar Gonzalez</authors>
     <owners>Ademar Gonzalez</owners>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A minify WebPart for Suave</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2016</copyright>
+    <copyright>Copyright 2026 Ademar Gonzalez</copyright>
     <tags>suave minify web</tags>
   </metadata>
 </package>
