@@ -1,7 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2022
 before_build:
-- ps: 
   # Download the latest dotnet-install.ps1 script
   - ps: (New-Object System.Net.WebClient).DownloadFile('dot.net', "$env:appveyor_build_folder\dotnet-install.ps1")
 
