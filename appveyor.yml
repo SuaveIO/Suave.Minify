@@ -2,7 +2,7 @@ version: 1.0.{build}
 image: Visual Studio 2022
 before_build:
   # Download the latest dotnet-install.ps1 script
-  - ps: (New-Object System.Net.WebClient).DownloadFile('dot.net', "$env:appveyor_build_folder\dotnet-install.ps1")
+  - ps: (New-Object System.Net.WebClient).DownloadFile('https://dot.net/v1/dotnet-install.ps1', "$env:appveyor_build_folder\dotnet-install.ps1")
 
   # Install .NET 10 SDK
   - ps: '& "$env:appveyor_build_folder\dotnet-install.ps1" -Channel "10.0" -InstallDir "C:\Program Files\dotnet"'
